@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        .myHeading {
+          color: red;
+        }
+        
+      </style>
+    </head>
+    <body>
+      <div>
+        <h1 id="heading">This is the title of the page</h1>
+        <button onclick="changeTitle()">
+            Title Change
+        </button>
+        <button onclick="addClassToTitle()">Add Class</button>
+        <button onclick="changePcontent()">Change P</button>
+        <button onclick="changeUrls()"> Change URL</button>
+        <button onclick="addParagraph()">Add P</button>
+        <button onclick=" firstUlDisappear()">Hide List</button>
+        <button onclick="paintItGreen();">Change Color</button>
+        <button onclick="changeFooterText()">Change Footer</button>
+        
+        <h2>This is the subtitle of the page</h2>
+      </div>
+  
+      <div>
+        <hr />
+  
+        <ul id="firstList">
+          <li>1st</li>
+          <li>2nd</li>
+          <li>3rd</li>
+        </ul>
+  
+        <ul id="secondList">
+          <li>1st</li>
+          <li>2nd</li>
+          <li>3rd</li>
+        </ul>
+  
+        <a id="link" href="strive.school">This link goes to Strive School</a>
+  
+        <div>
+          <p>This text is just for the exercise</p>
+        </div>
+  
+        <div>
+          <input
+            type="text"
+            id="input-field"
+            placeholder="input field for the exercise"
+         
+          />
+        </div>
+      </div>
+  
+      <div>
+        <p>And this text is just for the exercise too!</p>
+        <h2 id="footer" style="color: red">
+          Save this page on your computer and open it with VSCode to get the
+          questions!
+        </h2>
+      </div>
+      <script>
+        const changeTitle = function (newTitle) {
+            document.title = "This is a new title";
+            document.getElementById("heading").innerHTML = document.title;
+        }
+        const addClassToTitle = function () {
+            element = document.getElementById("heading");
+            element.classList.add("myHeading");
+        }
+        const changePcontent = function () {
+            p = document.querySelector("div p");
+            p.innerHTML = "This is a New text";
+        }
+        const changeUrls = function () {
+            findlink = document.getElementById("link");
+            findlink.href = "https://www.google.com"
+        }
+        const firstUlDisappear = function () {
+           list = document.getElementById("firstList")
+           if (list.style.display === "none") {
+            list.style.display = "block";
+                } else {
+                list.style.display = "none";
+            }
+        }
+        const paintItGreen = function (){
+            element = document.querySelector("ul");
+            element.style.backgroundColor = "#00FF00"
+        }
+
+        const changeFooterText = function () {
+            document.getElementById("footer").innerHTML = "End of the Page"
+        }
+        
+
+
+</script>
